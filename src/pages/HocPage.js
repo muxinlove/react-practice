@@ -24,6 +24,10 @@ const foo2 = Comp => props => {
 
 // const Foo = foo2(foo(foo(Child)));
 
+// 装饰器
+// 必须class组件(语句前不能export)
+// 自下而上执行
+// 需要插件配置
 @foo2
 @foo
 @foo
@@ -36,8 +40,6 @@ class Child extends Component {
     )
   }
 }
-
-
 
 export default class HocPage extends Component {
   render() {
