@@ -1,6 +1,7 @@
 import React from 'react';
 // import ContextPage from './pages/ContextPage.js';
-import ReduxPage from './pages/ReduxPage.js';
+// import ReduxPage from './pages/ReduxPage.js';
+import CaculatorPage from './pages/CaculatorPage.js';
 import './App.css';
 
 
@@ -47,7 +48,10 @@ function App() {
       {/* <ContextPage /> */}
 
       {/* redux */}
-      <ReduxPage />
+      {/* <ReduxPage /> */}
+
+      {/* 计算器 */}
+      <CaculatorPage />
     </div>
   );
 }

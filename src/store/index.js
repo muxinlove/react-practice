@@ -6,9 +6,9 @@ import { createStore, applyMiddleware, combineReducers } from "../KRedux.js";
 const countReducer = (state = 0, action) => {
   switch (action.type) {
     case 'ADD':
-      return state + 1;
+      return state + action.payload;
     case 'MINUS':
-      return state - 1;
+      return state - action.payload;
     default:
       return state;
   }
