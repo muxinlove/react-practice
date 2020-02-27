@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// import { Provider } from 'react-redux';
-import { Provider } from './KReactRedux.js';
+import { Provider } from 'react-redux';
+// import { Provider } from './KReactRedux.js';
 import store from './store/index.js'
 
 

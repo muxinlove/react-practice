@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 
 function countReducer(state = 0, action) {
   switch (action.type) {
@@ -11,6 +11,27 @@ function countReducer(state = 0, action) {
   }
 }
 
-const store = createStore(countReducer);
+const initialState = {
+  isLogin: false
+};
+function loginReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'LOGIN':
+      return {
+        isLogin: true
+      }
+    case 'LOGOUT':
+      return {
+        isLogin: false
+      }
+    default:
+      return state;
+  }
+}
+
+const store = createStore(combineReducers({
+  baseInfo: loginReducer,
+  count: countReducer
+}));
 
 export default store;
