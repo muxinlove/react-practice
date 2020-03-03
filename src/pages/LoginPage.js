@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
+import Redirect from '../k-react-router-dom/Redirect.js'
 
 const mapStateToProps = ({ baseInfo }) => ({
   isLogin: baseInfo.isLogin

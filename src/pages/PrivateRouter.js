@@ -3,7 +3,9 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
+// import { Route, Redirect } from 'react-router-dom';
+import Route from '../k-react-router-dom/Route.js'
+import Redirect from '../k-react-router-dom/Redirect.js'
 
 
 const mapStateToProps = ({ baseInfo }) => ({
