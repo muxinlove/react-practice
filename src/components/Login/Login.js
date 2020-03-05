@@ -26,12 +26,13 @@ export default connect(
       this.props.hideLogin();
     }
     render() {
+      const { hideLogin } = this.props;
       return (
         createPortal(
           <div className='login-box'>
-            <div className="cover"></div>
+            <div className="cover" onClick={hideLogin}></div>
             <div className="box">
-              <h4>登陆</h4>
+              <div>登陆</div>
               <div>
                 <button onClick={this.login}>login</button>
               </div>

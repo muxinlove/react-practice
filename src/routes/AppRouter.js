@@ -4,6 +4,7 @@ import Home from '../pages/Home.js'
 import Search from '../pages/Search.js'
 import Cart from '../pages/Cart.js'
 import Personal from '../pages/Personal.js'
+import _404 from '../pages/_404.js'
 import PrivateRoute from '../components/PrivateRoute/PrivateRoute.js'
 
 export default class AppRouter extends Component {
@@ -16,6 +17,7 @@ export default class AppRouter extends Component {
           <Route path='/cart' component={Cart}></Route>
           {/* 守卫personal */}
           <PrivateRoute path='/personal' component={Personal}></PrivateRoute>
+          <Route component={_404}></Route>
         </Switch>
       </Router>
     )
