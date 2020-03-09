@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 // import ReduxPage from "./pages/ReduxPage.js";
-import ReactReduxPage from "./pages/ReactReduxPage.js";
+// import ReactReduxPage from "./pages/ReactReduxPage.js";
+import HookPage from "./pages/HookPage.js";
+import HookCallbackPage from "./pages/HookCallbackPage.js";
 
 function App() {
   return (
@@ -10,7 +12,11 @@ function App() {
       {/* <ReduxPage /> */}
 
       {/* react-redux */}
-      <ReactReduxPage />
+      {/* <ReactReduxPage /> */}
+
+      {/* hook */}
+      {/* <HookPage /> */}
+      <HookCallbackPage />
     </div>
   );
 }
