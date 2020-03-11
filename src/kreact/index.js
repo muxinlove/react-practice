@@ -5,18 +5,24 @@ function createElement(type, props, ...children) {
   }
 
   // Resolve default props
+  // if (type && type.defaultProps) {
+  //   const defaultProps = type.defaultProps;
+  //   for (let propName in defaultProps) {
+  //     if (props[propName] === undefined) {
+  //       props[propName] = defaultProps[propName];
+  //     }
+  //   }
+  // }
+
+  let defaultProps = {};
   if (type && type.defaultProps) {
-    const defaultProps = type.defaultProps;
-    for (let propName in defaultProps) {
-      if (props[propName] === undefined) {
-        props[propName] = defaultProps[propName];
-      }
-    }
+    defaultProps = { ...type.defaultProps };
   }
 
   return {
     type: type,
     props: {
+      ...defaultProps,
       ...props,
       // 统一处理为对象 源码是一个是对象 多个是数组
       children: children.map(child => typeof child === 'object' ? child : createTextNode(child))
